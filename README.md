@@ -21,6 +21,8 @@ Things I regret:
      - I was also considering dragging the container horizontally
    - The end result isn't too bad or demanding, just ugly
  - Not using Orpheus until the end
+ - Not using canvas?
+    - At least for the moon icons?
 
 ----
 
