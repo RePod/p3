@@ -15,6 +15,7 @@ Cool stuff used:
 ----
 
 Things I regret:
+ - Optimizing it for 1366x768 with no intentions of scaling
  - Spawning all the date placeholders at once into one huge container element
    - It was a stop-gap solution to deal with populating them dynamically
      - I was also considering dragging the container horizontally
