@@ -60,7 +60,7 @@ repod.p3 = {
                 ["Day Buffer","<input data-config-target='buffer' value='"+config.buffer+"'></input>","Amount of days to spawn in each direction, 182 is a full year. Large amounts may be resource intensive."],
                 ["<input type='checkbox' id='quickstart' data-config-target='quickstart' "+((config.quickstart)?"checked":"")+"> <label for='quickstart'>Quick Start</label>","","Skip starting animation to current date. Ignored by Kiosk mode."],
                 ["<input type='checkbox' id='kioskmode' data-config-target='kiosk' "+((config.kiosk)?"checked":"")+"> <label for='kioskmode'>Kiosk Mode</label>","","Let the calendar animate freely, may break and reduce functionality but relaxing to watch."],
-                ["Background <i class='fa fa-fw fa-refresh' style='float:right' title='Refresh saved background'></i>","<input data-config-target='background' value='"+config.background+"'></input>","Background image. Direct URL or special syntax. <strong>reddit:</strong> to scrape a comma-separated list of subreddits."]
+                ["Background <i class='fa fa-fw fa-refresh' style='float:right' title='Refresh saved background'></i><i class='fa fa-fw fa-upload' style='float:right' title='Export active background'></i>","<input data-config-target='background' value='"+config.background+"'></input>","Background image. Direct URL or special syntax. <strong>reddit:</strong> to scrape a comma-separated list of subreddits."]
             ];
 
             $.each(ops, function(i,v) { temp.append(that.genBlock(v[0],v[1],(v[2] || undefined))); });
@@ -90,6 +90,7 @@ repod.p3 = {
             $('#config-header .fa-refresh').on("click", function() { that.open(); });
             $('#config-header .fa-upload').on("click", function() { that.configexport(); });
             $('#config-header .fa-download').on("click", function() { that.configimport(); });
+            $('.config-block .fa-upload').on("click", function() { prompt("Currently active background URL:", repod.p3.appconfig.bg); });
             $('.config-block .fa-refresh').on("click", function() { $(this).addClass('fa-spin'); repod.p3.background.apply(); });
             $(".fa-fast-backward").click(function() { repod.p3.focus("first"); });
             $(".fa-fast-forward").click(function() { repod.p3.focus("last"); });
@@ -159,7 +160,7 @@ repod.p3 = {
 
             function checkURL(url) {
                 url = url.replace(/https?:/,"");
-                if (/\.(jpe?g|gif|png)$/i.test(url)) { $("#container").css({"background-image": "url('"+url+"')"}); $('.config-block .fa-refresh').removeClass('fa-spin'); }
+                if (/\.(jpe?g|gif|png)$/i.test(url)) { repod.p3.appconfig.bg = url; $("#container").css({"background-image": "url('"+url+"')"}); $('.config-block .fa-refresh').removeClass('fa-spin'); }
                 else if (/(www\.)?imgur\.com\//.test(url)) { checkURL("//i.imgur.com/"+url.match(/\/imgur.com\/(\w{4,})/).pop()+".png"); }
                 else if (!input) {
 
