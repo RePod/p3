@@ -6,7 +6,7 @@ My old hosting/testing/having fun solution (while also being exposed to the web)
 
 Cool stuff used:
  - *jQuery* and *jQuery UI* (really bloats the repo, original plans were ambitious to make something full fledged)
- - Font Awesome for 99% of the UI, allowing meaningful and understood interactions
+ - *Font Awesome* for 99% of the UI, allowing meaningful and understood interactions
  - *[DateJS](http://www.datejs.com/)* for making managing time with relative units extremely easy
  - *[SunCalc](https://github.com/mourner/suncalc)* for doing the same as above, except for phases of the moon
  - The *[TS Block font](http://www.dafont.com/ts-block.font)* which looks really good (see: the digits)
