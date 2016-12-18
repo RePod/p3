@@ -64,6 +64,9 @@ repod.p3 = {
             ];
 
             $.each(ops, function(i,v) { temp.append(that.genBlock(v[0],v[1],(v[2] || undefined))); });
+            
+            //Seek buttons
+            temp.append('<table id="seekawayout"><tr><td><i class="fa fa-fast-backward"></i></td><td><i class="fa fa-step-backward"></i></td><td><i class="fa fa-eject"></i></td><td><i class="fa fa-step-forward"></i></td><td><i class="fa fa-fast-forward"></i></td></tr></table>');
 
             repod.p3.column.open(); //$("#container").animate({left: '250px'});
             $("#left").html(temp);
@@ -88,6 +91,11 @@ repod.p3 = {
             $('#config-header .fa-upload').on("click", function() { that.configexport(); });
             $('#config-header .fa-download').on("click", function() { that.configimport(); });
             $('.config-block .fa-refresh').on("click", function() { $(this).addClass('fa-spin'); repod.p3.background.apply(); });
+            $(".fa-fast-backward").click(function() { repod.p3.focus("first"); });
+            $(".fa-fast-forward").click(function() { repod.p3.focus("last"); });
+            $(".fa-step-forward").click(function() { repod.p3.focus("next"); });
+            $(".fa-step-backward").click(function() { repod.p3.focus("prev"); });
+            $(".fa-eject").click(function() { repod.p3.focus("today"); });
         },
         configexport: function() {
             this.save();
@@ -186,21 +194,12 @@ repod.p3 = {
         $("#top > a").css("font-size",$("#top").height() - (parseInt($("#top > a").css("padding-top")) + parseInt($("#top > a").css("padding-bottom"))));
     },
     bind: function() {
+        //Planned to have update in real time
         /*setInterval(function() {
             repod.p3.focus(repod.p3.generateSelector(Date.now()));
         },1000);*/
         var that = this;
-        $(".fa-image").click(function() { that.background.set(); });
-        $(".fa-fast-backward").click(function() { that.focus("first"); });
-        $(".fa-fast-forward").click(function() { that.focus("last"); });
-        $(".fa-step-forward").click(function() { that.focus("next"); });
-        $(".fa-step-backward").click(function() { that.focus("prev"); });
-        $(".fa-eject").click(function() { that.focus("today"); });
-        $("#datepicker").datepicker({
-            minDate: Date.parse($(".item").first().attr("id")),
-            maxDate: Date.parse($(".item").last().attr("id")),
-            onSelect: function(date) { repod.p3.focus(repod.p3.generateSelector(Date.parse(date))); }
-        });
+        //useless now
         //$(window).resize(function() { that.focus("active"); });
     },
     generate: {

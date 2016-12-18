@@ -76,7 +76,8 @@ a:hover { /*box-shadow: 0 -4px 2px -2px #fff inset;*/ color:#fff !important; }
 .smallbar > span { visibility:hidden; }
 .smallbar > span:hover { visibility:visible; }
 
-.smallbar i { cursor:pointer; font-size:large; text-align:center; }
+table#seekawayout { width:100%; text-align:center; }
+table#seekawayout i { cursor:pointer; font-size:large; text-align:center; }
 
 /* Default global colors */
 .active .num.small, .active .three_day   { color:#fff; }
