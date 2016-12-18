@@ -1,0 +1,7 @@
+/* Can almost feel it.*/
+#container, html { background-image:none !important; background-color: #fff; }
+#center { color:#6e6060 !important; }
+
+.active, .num, .num.small, .three_day { color:#000 !important; }
+.smallbar { background-color:#2185f4; box-shadow:0px 2px 5px 2px rgba(168,168,168,1); }
+.moon { display:none; }

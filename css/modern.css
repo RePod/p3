@@ -1,0 +1,14 @@
+/*
+
+    Utilize the scripts ability to pull images from Reddit's API from pre-determined subreddits.
+
+*/
+
+#container {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.smallbar { background-color:rgba(0,0,0,0); color:rgba(255,255,255,0.7); }
+#big_date *, .weekday, .three_day { color:rgba(255,255,255,0.7); }
+#big_date *, .num.small, .three_day { text-shadow: 2px 2px 2px #000; }

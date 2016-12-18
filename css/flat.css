@@ -1,0 +1,6 @@
+/* Hella flat. */
+#container, html { background-image:none !important; background-color: #404040; }
+#center { color:#6e6060 !important; }
+.smallbar { background-color:#404040 }
+#month_no,.num.small,.num { margin-left:initial; font-family: Arimo; font-style: unset; }
+.weekend { color:inherit; }

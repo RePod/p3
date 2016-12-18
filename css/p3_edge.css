@@ -1,0 +1,9 @@
+/*
+
+    Persona 3 Male colors
+
+*/
+
+#container, html { background-image:none !important; background-color:#222 !important; }
+#center { color:rgb(231,231,231) !important; }
+.smallbar { background-color:rgb(57,57,57) !important; }

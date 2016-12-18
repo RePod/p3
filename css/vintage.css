@@ -1,0 +1,18 @@
+/* Dust in the wind. */
+#container, html {
+    background-image:none !important;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #404040;
+}
+#center { color:#6e6060 !important; }
+.smallbar { background-color:#000; }
+.smallbar.p3animating { opacity:1 !important; } /* Prevent the bars from fading. */
+#month_no,.num.small,.num { margin-left:initial; }
+.weekend { color:inherit; }
+
+#big_date * { font-family: "Times New Roman", Times, serif; }
+#moon_container * {
+    filter: grayscale(80%);
+    font-family: "Times New Roman", Times, serif;
+    font-style: oblique;
+}

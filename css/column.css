@@ -1,0 +1,17 @@
+/* Hella flat. */
+#container, html { background-image:none !important; background-color: #000; }
+#center { color:#6e6060 !important; z-index: 1}
+#big_date  { color: black; }
+#month_no { color:white !important; }
+.smallbar { background-color:white }
+#month_no,.num.small,.num { margin-left:initial; font-family: Arimo; font-style: unset; }
+.weekend { color:inherit; }
+
+#moon_container { z-index:-1; }
+.three_day, .num.small, .active { color: black !important; }
+.item {
+    padding: 391px 0px 0px 0px;
+    top: 99px;
+    position: relative;
+    background-color: white;
+}

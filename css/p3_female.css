@@ -1,0 +1,10 @@
+/*
+
+    Persona 3 Male colors
+
+*/
+
+#container, html { background-image:none !important; background-color: #42191c !important; }
+#center { color:#6e6060 !important; }
+.smallbar { background-color:#ff8eaa !important; }
+.smallbar.p3animating { opacity:1 !important; } /* Prevent the bars from fading. */
